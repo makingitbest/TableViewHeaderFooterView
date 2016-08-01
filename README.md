@@ -1,7 +1,7 @@
 
 # [TableViewHeaderFooterView](http://www.cnblogs.com/makingitbest/p/5721395.html)
 
-![demo.gif](http://images2015.cnblogs.com/blog/976232/201607/976232-20160730162454981-1669722917.gif)
+![demo.gif](http://images2015.cnblogs.com/blog/976232/201608/976232-20160801092318950-1857978524.gif)
 
 > 特点
 
