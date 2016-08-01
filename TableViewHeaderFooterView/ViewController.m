@@ -34,9 +34,10 @@
 
 - (void)createTableViewAndHeaderFootView {
     
-    self.tableView            = [[UITableView alloc] initWithFrame:self.view.bounds];
-    self.tableView.delegate   = self;
-    self.tableView.dataSource = self;
+    self.tableView                = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.tableView.delegate       = self;
+    self.tableView.dataSource     = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:self.tableView];
     
     [self.tableView registerClass:[TestTableViewCell class] forCellReuseIdentifier:@"TestTableViewCell"];
@@ -45,6 +46,7 @@
 }
 
 #pragma mark - UITableViewDataSource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
     return self.dataArray.count;
@@ -96,7 +98,7 @@
     {
         ClassesModel *classesModel  = [[ClassesModel alloc] init];
         classesModel.className      = @"一班";
-        classesModel.classImageView = @"http://pic.cnblogs.com/avatar/607542/20151017230728.png";
+        classesModel.classImageView = @"http://f.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=34480776be0e7bec238f0be51a1e950e/b3fb43166d224f4a2ded606a0ff790529822d156.jpg";
         [self.dataArray addObject:classesModel];
         
         {
@@ -117,9 +119,9 @@
 
         {
             StudentsModel *studentModel = [[StudentsModel alloc] init];
-            studentModel.studentName    = @"小狗";
+            studentModel.studentName    = @"小画";
             studentModel.studentPicture = @"http://pic.cnblogs.com/avatar/607542/20151017230728.png";
-            studentModel.studentGender  = @"女";
+            studentModel.studentGender  = @"男";
             [classesModel.studentModelArray addObject:studentModel];
         }
         
@@ -208,6 +210,31 @@
             studentModel.studentGender  = @"女";
             [classesModel.studentModelArray addObject:studentModel];
         }
+        
+        {
+            StudentsModel *studentModel = [[StudentsModel alloc] init];
+            studentModel.studentName    = @"小苏";
+            studentModel.studentPicture = @"http://f.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=34480776be0e7bec238f0be51a1e950e/b3fb43166d224f4a2ded606a0ff790529822d156.jpg";
+            studentModel.studentGender  = @"男";
+            [classesModel.studentModelArray addObject:studentModel];
+        }
+        
+        {
+            StudentsModel *studentModel = [[StudentsModel alloc] init];
+            studentModel.studentName    = @"小龙";
+            studentModel.studentPicture = @"http://rescdn.qqmail.com/dyimg/20131218/7344ED6A7AF9.jpg";
+            studentModel.studentGender  = @"女";
+            [classesModel.studentModelArray addObject:studentModel];
+        }
+        
+        {
+            StudentsModel *studentModel = [[StudentsModel alloc] init];
+            studentModel.studentName    = @"小仙";
+            studentModel.studentPicture = @"http://b.hiphotos.baidu.com/zhidao/pic/item/3c6d55fbb2fb4316cc29db3322a4462309f7d341.jpg";
+            studentModel.studentGender  = @"女";
+            [classesModel.studentModelArray addObject:studentModel];
+        }
+
     }
 
 }
